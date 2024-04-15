@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ShopPet.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="assest/css/trangchu.css" rel="stylesheet" />
+    <link href="assest/font/themify-icons/themify-icons.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%--header-----------------------------------------------------------%>
+        <div class="app">
+            <div class="topbar_big">
+                <div class="topbar">
+                    <div class="topbar_left">Nơi tận hưởng những dai điệu nhạc hay nhất</div>
+                    <div class="topbar_right">
+                        <div class="dangky" id="dangky" runat="server">
+                            <%--<a href="DangKi.aspx" >Đăng ký</a>--%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_big">
+                <div class="header">
+                    <div class="logo">
+                        <img src="./assest/img/logomeo.jpg" alt="" width="70px" />
+                        <span><a href="TrangChu1.aspx">NamCloud</a></span>
+                    </div>
+                    <form method="get" action="Xulytimkiem.aspx" class="search">
+                        <div class="search">
+                            <input type="text" name="search" id="search" autocomplete="off" />
+                            <input type="button"><i class="ti-search"></i>
+                        </div>
+                    </form>
+                    <div class="giohang">
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="menu">
+                    <ul class="menu_list">
+                        <li><a href="TrangChu1.aspx">Trang chủ</a></li>
+                        <li><a href="">Giới thiệu</a></li>
+                        <li><a href="">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <br>
+            <!-- slide show -->
+
+            <div class="slide_big">
+                <div class="banner">
+                    <div class="slide fade">
+                        <div class="page">1/3</div>
+                        <img src="assest/img/banner11.jpg" alt="hinhanh" class="image_banner" />
+                        <div class="text">Khám phá</div>
+                    </div>
+
+                    <div class="slide fade">
+                        <div class="page">2/3</div>
+                        <img src="./assest/img/banner22.jpg" alt="hinhanh" class="image_banner">
+                        <div class="text">HipHop</div>
+                    </div>
+
+                    <div class="slide fade">
+                        <div class="page">3/3</div>
+                        <img src="./assest/img/banner33.jpg" alt="hinhanh" class="image_banner">
+                        <div class="text">Cổ điển</div>
+                    </div>
+                    <!-- dấu mũi tên -->
+                    <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="nextSlide(1)">&#10095;</a>
+                </div>
+                <br>
+                <!-- dấu chấm hiện chuyển slide -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="chuyenSlide(1)"></span>
+                    <span class="dot" onclick="chuyenSlide(2)"></span>
+                    <span class="dot" onclick="chuyenSlide(3)"></span>
+                </div>
+            </div>
+
+            <!-- Your content placeholder -->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+        <%--footer-----------------------------------------------------------%>
+        <div class="footer" id="">
+            <div class="footer_left">
+                <h3>NamClound</h3>
+                <br>
+                <h4>Môn: Lập trình web cơ bản</h4>
+                <h4>Đề tài: Website chia sẻ nhạc</h4>
+                <h4>Giáo viên hướng dẫn: Lê Hữu Dũng</h4>
+            </div>
+            <div class="footer_right">
+                <h3>Thành viên:</h3>
+                <br>
+                <h4>Nguyễn Thành Nam-2210A02</h4>
+                <h4>Phạm Mạnh Lực-2210A02</h4>
+                <h4>Nguyễn Thị Thúy Hòa-2210a02</h4>
+            </div>
+        </div>
+    </form>
+</body>
+<style>
+    a {
+        text-decoration: none;
+    }
+</style>
+<script src="assest/javascript/slideshow.js"></script>
+</html>
